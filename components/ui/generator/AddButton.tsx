@@ -8,7 +8,8 @@ export default function AddButton({ createNewItem }: AddButtonProps) {
       onClick={() => {
         createNewItem();
       }}
-      className="bg-textinput-field-bg border-textinput-field-border border-2 rounded-3xl text-3xl w-15 justify-self-center"
+      className="bg-textinput-field-bg border-textinput-field-border border-2 rounded-3xl text-3xl w-15 max-w-15 max-h-10 justify-self-center
+      "
     >
       +
     </button>

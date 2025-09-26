@@ -1,4 +1,9 @@
-import { InputItem, OptionState } from "@/components/ui/Generator"; // Adjust path if needed
+import {
+  InputItem,
+  OptionState,
+  Question,
+  QUESTION_POOL,
+} from "@/components/ui/Generator"; // Adjust path if needed
 
 const SYMBOLS = "!@#$%^&*()_+";
 const OBFUSCATION_MAP: { [key: string]: string } = {
@@ -23,7 +28,18 @@ export const generatePassword = (
     input.value.trim().replace(/\s+/g, "")
   );
 
+  // Apply Casing
   switch (options.casing) {
+    case "Alternate Case":
+      passwordParts = passwordParts.map((p) =>
+        p
+          .split("")
+          .map((char, i) =>
+            i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
+          )
+          .join("")
+      );
+      break;
     case "ALLCAPS":
       passwordParts = passwordParts.map((p) => p.toUpperCase());
       break;
@@ -84,12 +100,8 @@ export const generateMnemonic = (
   }
 
   const keyParts = inputs.map((i) => {
-    const words = i.placeholder.replace("?", "").split(" ");
-    const memorableWord = words[words.length - 2] || words[0];
-    return (
-      memorableWord.charAt(0).toUpperCase() +
-      memorableWord.charAt(1).toLowerCase()
-    );
+    const questionObj = QUESTION_POOL.find((q) => q.question === i.placeholder);
+    return questionObj ? questionObj.mnemonic : "??";
   });
 
   const acronym = keyParts.join("");

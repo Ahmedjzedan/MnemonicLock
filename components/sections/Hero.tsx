@@ -77,12 +77,12 @@ export default function HeroSection() {
     <div className="flex flex-col sm:flex-row items-center justify-between mt-10 mb-10 mx-4 sm:mx-8 md:mx-10 lg:mx-15 xl:mx-20 gap-30">
       <div className="flex flex-col gap-5">
         <h1 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold">
-          Create h!GhLy $3cUr3 passwords that you won't forget
+          Create h!GhLy $3cUr3 passwords that you won&apos;t forget
         </h1>
         <p className="text-sm sm:text-sm md:text-[16px]">
           Answer some randomly generated questions about yourself then our smart
           algorithm will create a password for you out of your answers thus
-          providing a highly secure password that's easy to remember!
+          providing a highly secure password that&apos;s easy to remember!
         </p>
       </div>
       <div

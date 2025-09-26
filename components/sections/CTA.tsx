@@ -8,8 +8,11 @@ export default function CTA() {
       </h1>
 
       <Link
+        // className="mt-10 mb-30 px-10 py-5 tracking-wider text-foreground font-black font-inria-sans text-xl rounded-xl
+        // bg-background shadow-[0px_0px_45px_5px_var(--CTA-shadow),inset_0px_0px_10px_5px_var(--foreground)]
+        // "
         className="mt-10 mb-30 px-10 py-5 tracking-wider text-foreground font-black font-inria-sans text-xl rounded-xl
-        bg-background shadow-[0px_0px_45px_5px_var(--CTA-shadow),inset_0px_0px_10px_5px_var(--foreground)]
+        bg-background shadow-[0px_0px_45px_5px_var(--foreground),inset_0px_0px_5px_3px_var(--CTA-shadow)]
         "
         href={"/home"}
       >

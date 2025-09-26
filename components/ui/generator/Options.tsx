@@ -37,13 +37,15 @@ export default function Options({ options, setOptions }: OptionsProps) {
         onSelect={(value) => handleOptionChange("casing", value)}
         name="Casing"
         value={options.casing}
+        title="Casing"
       />
       <Select
         className="col-start-3 justify-self-center"
-        options={["-", "_", "Normal spaces", "No spaces"]}
+        options={["-", "_"]}
         onSelect={(value) => handleOptionChange("spaces", value)}
         name="Spaces"
         value={options.spaces}
+        title="Spaces"
       />
 
       <div

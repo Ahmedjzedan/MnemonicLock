@@ -7,6 +7,7 @@ type CustomSelectProps = {
   onSelect: (option: string) => void;
   name: string;
   value: string;
+  title: string;
   className?: string;
   disabled?: boolean;
 };
@@ -15,6 +16,7 @@ export default function Select({
   options,
   onSelect,
   name,
+  title,
   value,
   className,
   disabled = false,
@@ -45,7 +47,7 @@ export default function Select({
       className={`relative w-22 md:w-40 lg:w-50 ${className}`}
       ref={selectRef}
     >
-      <h2 className="text-sm mb-1">{name}</h2>
+      <h2 className="text-sm mb-1">{title}</h2>
       <button
         type="button"
         className={`
@@ -73,7 +75,7 @@ export default function Select({
             absolute z-10 w-full max-w-60 mt-1 
             border-2 border-textinput-field-border
             rounded-md shadow-lg 
-            overflow-hidden
+            overflow-hidden text-sm 
           "
           role="listbox"
         >
@@ -81,10 +83,10 @@ export default function Select({
             className="
               bg-choice-bg 
               max-h-48 overflow-y-auto
-              text-choice-text-options
+              text-choice-text-options 
             "
           >
-            <li className="text-choice-heading text-center p-2 text-sm font-bold sticky top-0 bg-choice-bg">
+            <li className="text-choice-heading text-center p-2 text-xs font-bold sticky top-0 bg-choice-bg">
               {name}
             </li>
             {options.map((option) => (

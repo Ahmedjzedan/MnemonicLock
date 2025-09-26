@@ -4,7 +4,6 @@ import Input from "./generator/Input";
 import AddButton from "./generator/AddButton";
 import Options from "./generator/Options";
 import Result from "./generator/Result";
-import { motion } from "framer-motion";
 import { generatePassword, generateMnemonic } from "@/app/lib/passwordUtils";
 
 export type Question = {
@@ -330,7 +329,7 @@ export default function Generator() {
       className="flex flex-col my-20 py-20 px-4 sm:px-8 md:px-10 rounded-xl bg-hero-bg backdrop-blur-xl
       shadow-[0_0_20px_0_var(--hero-bg-shadow)] md:shadow-[0_0_40px_0_var(--hero-bg-shadow)] lg:shadow-[0_0_60px_0_var(--hero-bg-shadow)]"
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 items-center">
         {inputs.map((input) => (
           <Input
             key={input.id}
@@ -355,7 +354,7 @@ export default function Generator() {
       <button
         onClick={handleCreatePassword}
         className="tracking-wider mt-20 text-foreground font-black font-inria-sans text-xl rounded-xl
-        bg-background shadow-[0px_0px_50px_10px_var(--CTA-shadow),inset_0px_0px_10px_5px_var(--foreground)]
+        bg-background shadow-[0px_0px_20px_5px_var(--foreground),inset_0px_0px_5px_3px_var(--CTA-shadow)]
         max-w-60 h-15 mx-auto px-5"
       >
         Create Password
