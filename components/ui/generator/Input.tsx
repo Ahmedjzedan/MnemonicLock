@@ -30,7 +30,7 @@ export default function Input({
   const [editIsClicked, setEditIsClicked] = useState<boolean>(false);
   return (
     <div>
-      <span className="text-xs mb-3 ml-10 md:ml-1">{placeholder}</span>
+      <span className="text-sm mb-3 ml-10 md:ml-1">{placeholder}</span>
       <div className="flex flex-col relative mb-5">
         <div className="flex items-center">
           <button
@@ -65,7 +65,7 @@ export default function Input({
                     color="fill-background"
                     title="Change Question"
                   />
-                  <span className="text-xs text-background">
+                  <span className="text-sm text-background">
                     Change Question
                   </span>
                 </button>
@@ -79,7 +79,7 @@ export default function Input({
                     color="fill-background"
                     title="Random Answer"
                   />
-                  <span className="text-xs text-background">Random Answer</span>
+                  <span className="text-sm text-background">Random Answer</span>
                 </button>
                 <button
                   onClick={() => onDelete(id)}
@@ -91,14 +91,14 @@ export default function Input({
                     color="fill-background"
                     title="Delete"
                   />
-                  <span className="text-xs text-background">Delete</span>
+                  <span className="text-sm text-background">Delete</span>
                 </button>
               </motion.div>
             )}
           </AnimatePresence>
           <input
             type="text"
-            className="text-xs sm:text-sm md:text-xs lg:text-sm py-2 px-4 rounded-xl bg-textinput-field-bg border-2 w-full border-textinput-field-border"
+            className="text-sm sm:text-sm  py-2 px-4 rounded-xl bg-textinput-field-bg border-2 w-full border-textinput-field-border"
             placeholder={placeholder}
             value={value}
             onChange={(e) => onChange(id, e.target.value)}

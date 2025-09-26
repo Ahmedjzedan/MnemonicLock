@@ -24,9 +24,7 @@ export default function FAQElement({
         className="flex w-full items-center justify-between text-left p-5"
         onClick={() => setIsClicked(!isClicked)}
       >
-        <h1 className="text-sm sm:text-xl font-bold font-inria-sans">
-          {question}
-        </h1>
+        <h1 className="text-ssm font-bold">{question}</h1>
         <Chevron
           className={`w-4 h-4 sm:w-5 sm:h-5 ml-3 transition-all duration-300 ${
             isClicked ? "rotate-180" : "rotate-0"
@@ -43,7 +41,7 @@ export default function FAQElement({
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-5 pb-5 text-xs md:text-[16px]">{answer}</div>
+            <div className="px-5 pb-5 text-sm text-neutral-200">{answer}</div>
           </motion.div>
         )}
       </AnimatePresence>

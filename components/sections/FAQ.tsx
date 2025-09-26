@@ -3,10 +3,8 @@ import FAQElement from "../ui/FAQElement";
 export default function FAQ() {
   return (
     <div className="mt-30 flex flex-col items-stretch mx-4 sm:mx-8 md:mx-10 lg:mx-15 xl:mx-20">
-      <h1 className="self-center text-lg sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold font-inria-sans ">
-        FAQ
-      </h1>
-      <ul className="mt-5 flex flex-col gap-5 list-none">
+      <h1 className="self-center text-lg font-bold  ">FAQ</h1>
+      <ul className="mt-5 text-sm flex flex-col gap-5 list-none">
         <FAQElement
           question="How are these passwords both memorable and secure?"
           answer="The magic is in bridging the gap between human memory and computer-proof security. 

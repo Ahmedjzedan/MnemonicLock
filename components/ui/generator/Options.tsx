@@ -49,7 +49,7 @@ export default function Options({ options, setOptions }: OptionsProps) {
       />
 
       <div
-        className="flex justify-center items-center gap-2 text-xs md:text-sm"
+        className="flex row-start-1 justify-center items-end mb-3 gap-2 text-sm"
         title="(e.g., a -> 4, s -> $, etc.)"
       >
         <input
@@ -60,28 +60,6 @@ export default function Options({ options, setOptions }: OptionsProps) {
           className=" h-5 w-5 accent-foreground checked:bg-background bg-foreground"
         />
         <label htmlFor="obfuscate">Obfuscate letters</label>
-      </div>
-      <div className="flex justify-center items-center gap-2 text-xs md:text-sm">
-        <input
-          id="symbols"
-          type="checkbox"
-          checked={options.randomSymbols}
-          onChange={(e) =>
-            handleOptionChange("randomSymbols", e.target.checked)
-          }
-          className=" min-h-5 min-w-5 accent-foreground checked:bg-background bg-foreground"
-        />
-        <label htmlFor="symbols">Random Symbols</label>
-      </div>
-      <div className="flex justify-center items-center gap-2 text-xs md:text-sm">
-        <input
-          id="words"
-          type="checkbox"
-          checked={options.extraWords}
-          onChange={(e) => handleOptionChange("extraWords", e.target.checked)}
-          className=" min-h-5 min-w-5 accent-foreground checked:bg-background bg-foreground"
-        />
-        <label htmlFor="words">Extra words</label>
       </div>
     </div>
   );

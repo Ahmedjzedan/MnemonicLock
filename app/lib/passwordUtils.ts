@@ -5,7 +5,6 @@ import {
   QUESTION_POOL,
 } from "@/components/ui/Generator"; // Adjust path if needed
 
-const SYMBOLS = "!@#$%^&*()_+";
 const OBFUSCATION_MAP: { [key: string]: string } = {
   a: "4",
   e: "3",
@@ -70,24 +69,6 @@ export const generatePassword = (
       .join("");
   }
 
-  if (options.randomSymbols) {
-    for (let i = 0; i < 3; i++) {
-      const randomIndex = Math.floor(
-        Math.random() * (finalPassword.length + 1)
-      );
-      const randomSymbol = SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)];
-      finalPassword =
-        finalPassword.slice(0, randomIndex) +
-        randomSymbol +
-        finalPassword.slice(randomIndex);
-    }
-  }
-
-  if (options.extraWords) {
-    const extraWords = ["Fire", "Sun", "Rock", "Sky", "Code"];
-    finalPassword += extraWords[Math.floor(Math.random() * extraWords.length)];
-  }
-
   return finalPassword;
 };
 
@@ -99,13 +80,16 @@ export const generateMnemonic = (
     return { acronym: "Error", key: "Please fill all fields" };
   }
 
-  const keyParts = inputs.map((i) => {
+  const acronymParts = inputs.map((i) => {
     const questionObj = QUESTION_POOL.find((q) => q.question === i.placeholder);
     return questionObj ? questionObj.mnemonic : "??";
   });
 
-  const acronym = keyParts.join("");
-  const key = keyParts.join(" - ");
+  // The acronym is now joined without spaces
+  const acronym = acronymParts.join("");
+
+  // The key is the full placeholder text of the questions
+  const key = inputs.map((i) => i.placeholder.replace("?", "")).join(" | ");
 
   return { acronym, key };
 };

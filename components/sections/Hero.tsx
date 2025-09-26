@@ -79,7 +79,7 @@ export default function HeroSection() {
         <h1 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold">
           Create h!GhLy $3cUr3 passwords that you won&apos;t forget
         </h1>
-        <p className="text-sm sm:text-sm md:text-[16px]">
+        <p className="text-sm text-neutral-200">
           Answer some randomly generated questions about yourself then our smart
           algorithm will create a password for you out of your answers thus
           providing a highly secure password that&apos;s easy to remember!
@@ -123,10 +123,10 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="text-center mt-10 text-sm sm:text-sm md:text-md lg:text-lg xl:text-2xl font-bold font-inria-sans">
+        <div className="text-center mt-10 text-md font-bold">
           {showResult ? finalPassword : "Creating..."}
         </div>
-        <div className="text-center text-xs sm:text-xs md:text-sm lg:text-md xl:text-lg">
+        <div className="text-center text-sm ">
           {showResult ? mnemonic : "..."}
         </div>
       </div>
