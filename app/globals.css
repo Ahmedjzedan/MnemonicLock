@@ -1,26 +1,97 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.dark {
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --hero-bg: rgba(216, 216, 216, 0.2);
+  --hero-bg-shadow: rgba(255, 255, 255, 0.7);
+  --CTA-shadow: rgba(255, 255, 255, 0.5);
+  --logo: #ffffff;
+  --footer-bg: rgba(57, 57, 57, 0.5);
+  --footer-text: #ffffff;
+  --footer-list-header: #b4b4b4;
+  --textinput-field-bg: rgb(217 217 217 / 0.12);
+  --textinput-field-border: #e1e1e1;
+  --output: #ffffff;
+  --option-tagging: #ffffff;
+  --choice-bg: #2a2a2a;
+  --choice-highlight-bg: #797979;
+  --choice-heading: #6c6c6c;
+  --choice-text-options: #c7c7c7;
+}
+
+.light {
+  --background: #f0f0f0;
+  --foreground: #000000;
+  --hero-bg: rgba(92, 92, 92, 0.1);
+  --hero-bg-shadow: rgba(0, 0, 0, 0.7);
+  --CTA-shadow: rgba(0, 0, 0, 1);
+  --logo: #000000;
+  --footer-bg: rgba(255, 255, 255, 0.3);
+  --footer-text: #000000;
+  --footer-list-header: #616161;
+  --textinput-field-bg: rgb(0 0 0 / 0.1);
+  --textinput-field-border: #404040;
+  --output: #242424;
+  --option-tagging: #434343;
+  --choice-bg: #d9d9d9;
+  --choice-highlight-bg: #a6a6a6;
+  --choice-heading: #606060;
+  --choice-text-options: #353535;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --hero-bg: rgba(216, 216, 216, 0.3);
+    --hero-bg-shadow: rgba(0, 0, 0, 0.7);
+    --CTA-shadow: rgba(0, 0, 0, 0.5);
+    --logo: #000000;
+    --footer-bg: rgba(255, 255, 255, 0.3);
+    --footer-text: #010101;
+    --footer-list-header: #616161;
+    --textinput-field-bg: rgb(0 0 0 / 0.35);
+    --textinput-field-border: #404040;
+    --output: #242424;
+    --option-tagging: #434343;
+    --choice-bg: #707070;
+    --choice-highlight-bg: #a6a6a6;
+    --choice-heading: #606060;
+    --choice-text-options: #353535;
+  }
 }
 
 @theme inline {
+  --font-inria-sans: "Inria Sans", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-hero-bg: var(--hero-bg);
+  --color-CTA-shadow: var(--CTA-shadow);
+  --color-logo: var(--logo);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
+  --color-footer-list-header: var(--footer-list-header);
+  --color-textinput-field-bg: var(--textinput-field-bg);
+  --color-textinput-field-border: var(--textinput-field-border);
+  --color-output: var(--output);
+  --color-option-tagging: var(--option-tagging);
+  --color-choice-bg: var(--choice-bg);
+  --color-choice-highlight-bg: var(--choice-highlight-bg);
+  --color-choice-heading: var(--choice-heading);
+  --color-choice-text-options: var(--choice-text-options);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
