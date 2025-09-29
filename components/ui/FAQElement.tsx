@@ -41,7 +41,9 @@ export default function FAQElement({
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-5 pb-5 text-sm text-neutral-200">{answer}</div>
+            <div className="px-5 pb-5 text-sm text-[var(--muted)]">
+              {answer}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

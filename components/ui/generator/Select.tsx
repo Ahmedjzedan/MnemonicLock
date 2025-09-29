@@ -86,7 +86,7 @@ export default function Select({
               text-choice-text-options 
             "
           >
-            <li className="text-choice-heading text-center p-2 text-xs font-bold sticky top-0 bg-choice-bg">
+            <li className="text-choice-heading text-center p-2 text-sm font-bold sticky top-0 bg-choice-bg">
               {name}
             </li>
             {options.map((option) => (
