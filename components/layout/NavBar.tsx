@@ -8,6 +8,7 @@ import Lock from "./svgs/Lock";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function NavBar() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -32,7 +33,9 @@ export default function NavBar() {
          flex items-center justify-center"
         >
           <Lock className="w-5 h-5 sm:w-7 sm:h-7 lg:h-10 lg:w-10 xl:w-11 xl:h-11" />
-          <span className="font-inria-sans">MnemonicLock</span>
+          <Link href={"/"}>
+            <span className="font-inria-sans">MnemonicLock</span>
+          </Link>
         </div>
       </div>
       <div className="self-baseline flex items-center w-auto justify-center col-span-1">

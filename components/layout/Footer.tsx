@@ -17,7 +17,7 @@ export default function Footer() {
       className={
         mounted
           ? `grid grid-cols-1 md:grid-cols-3 items-start justify-center mt-10 gap-10
-    bg-footer-bg w-full rounded-t-4xl py-5 md:pb-25 ${footerBorder}`
+          bg-footer-bg w-full rounded-t-4xl py-5 md:pb-25 ${footerBorder}`
           : "grid grid-cols-1 md:grid-cols-3 items-center justify-center mt-10 gap-10 bg-footer-bg bottom-0 w-full rounded-t-4xl py-5 md:pb-25"
       }
     >
@@ -29,7 +29,7 @@ export default function Footer() {
           <Lock className="w-5 h-5 sm:w-7 sm:h-7 lg:h-8 lg:w-8 xl:w-9 xl:h-9" />
           <h1 className="font-bold">MnemonicLock</h1>
         </div>
-        <p className="text-center text-neutral-200 md:text-sm text-[0.7rem] mx-5">
+        <p className="text-center text-foreground/80 md:text-sm text-[0.7rem] mx-5">
           Creates easy to remember hard to penetrate passwords based on the
           users memory using mnemonics
         </p>

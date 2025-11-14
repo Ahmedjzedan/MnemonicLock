@@ -16,7 +16,7 @@ export default function FAQElement({
   return (
     // The main container for the whole element
     <div
-      className="flex flex-col w-full rounded-3xl border-3 border-foreground bg-background/50
+      className="flex flex-col w-full rounded-3xl border-2 border-foreground bg-background/50
     hover:shadow-[0_0_60px_0_rgba(255,255,255,0.5)] transition-shadow duration-300"
     >
       {/* 1. The Clickable Header */}
