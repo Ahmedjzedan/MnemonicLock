@@ -36,9 +36,9 @@ export default function Footer() {
       </div>
       <ul className="mt-5 grid template-columns-1 gap-3 text-center list-none text-sm justify-center ">
         <li className=" text-footer-list-header">Also by me</li>
-        <a className="text-footer-text">unfinshed revise</a>
-        <a className="text-footer-text">unreleased alkurdy</a>
-        <a className="text-footer-text">Illegal drug empire</a>
+        <a className="text-footer-text">Project 1</a>
+        <a className="text-footer-text">Project 2</a>
+        <a className="text-footer-text">Project 3</a>
       </ul>
       <ul className="mt-5 grid template-columns-1 gap-3 text-center list-none text-sm   justify-center">
         <li className=" text-footer-list-header">Media</li>
